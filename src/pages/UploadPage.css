@@ -260,3 +260,43 @@
   font-size: 0.82em;
   cursor: pointer;
 }
+
+@media (max-width: 600px) {
+  .upload-page {
+    padding: 24px 12px;
+    gap: 20px;
+  }
+
+  .upload-card {
+    padding: 24px 16px;
+    border-radius: 12px;
+  }
+
+  .upload-header h2 {
+    font-size: 1.2em;
+  }
+
+  .file-label {
+    padding: 18px 12px;
+  }
+
+  .manage-card {
+    padding: 20px 14px;
+    border-radius: 12px;
+  }
+
+  .manage-item {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .manage-item img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .manage-confirm {
+    width: 100%;
+    justify-content: flex-end;
+  }
+}

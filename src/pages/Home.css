@@ -133,3 +133,84 @@ footer p {
   max-height: 90vh;
   overflow: auto;
 }
+
+.modal-img {
+  max-width: 90vw;
+  max-height: 80vh;
+  border-radius: 12px;
+}
+
+.modal-close-btn {
+  margin-top: 16px;
+  padding: 8px 18px;
+  border-radius: 6px;
+  background: #f59e0b;
+  color: #2c2418;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 1em;
+}
+
+/* Mobile optimizations */
+@media (max-width: 600px) {
+  header {
+    padding: 36px 16px 28px;
+  }
+
+  header h1 {
+    font-size: 1.6em;
+  }
+
+  header p {
+    font-size: 0.95em;
+  }
+
+  .slideshow {
+    padding: 24px 12px 36px;
+  }
+
+  .slide-img {
+    height: 280px;
+  }
+
+  .slide-title {
+    font-size: 1.15em;
+    margin-top: 16px;
+  }
+
+  .slide-desc {
+    font-size: 0.9em;
+    margin-bottom: 16px;
+    padding: 0 8px;
+  }
+
+  .slide-controls {
+    gap: 20px;
+  }
+
+  .slide-btn {
+    width: 44px;
+    height: 44px;
+    font-size: 1.3em;
+  }
+
+  .modal-content {
+    padding: 20px 14px 16px;
+    border-radius: 12px;
+  }
+
+  .modal-close-btn {
+    padding: 12px 24px;
+    font-size: 1em;
+    min-height: 44px;
+  }
+
+  footer {
+    padding: 20px 16px;
+  }
+
+  footer p {
+    font-size: 0.85em;
+  }
+}

@@ -55,10 +55,10 @@ function Home() {
         {modalArt && (
           <div className="modal-overlay" onClick={closeModal}>
             <div className="modal-content" onClick={e => e.stopPropagation()}>
-              <img src={modalArt.src} alt={modalArt.title} style={{ maxWidth: '90vw', maxHeight: '80vh', borderRadius: '12px' }} />
+              <img src={modalArt.src} alt={modalArt.title} className="modal-img" />
               <h2>{modalArt.title}</h2>
               <p>{modalArt.description}</p>
-              <button onClick={closeModal} style={{ marginTop: '16px', padding: '8px 18px', borderRadius: '6px', background: '#f59e0b', color: '#2c2418', border: 'none', fontWeight: 'bold', cursor: 'pointer' }}>Close</button>
+              <button className="modal-close-btn" onClick={closeModal}>Close</button>
             </div>
           </div>
         )}

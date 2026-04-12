@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { BrowserRouter as Router, Routes, Route, NavLink } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, NavLink, useLocation } from 'react-router-dom';
 import { onAuthStateChanged } from 'firebase/auth';
 import { auth } from './firebase';
 import Home from './pages/Home';
@@ -10,6 +10,33 @@ import UploadPage from './pages/UploadPage';
 import './App.css';
 
 const ALLOWED_EMAILS = ["lucyfields11037@gmail.com", "zander28fields@gmail.com"];
+
+function NavBar() {
+  const [menuOpen, setMenuOpen] = useState(false);
+  const location = useLocation();
+
+  useEffect(() => {
+    setMenuOpen(false);
+  }, [location]);
+
+  return (
+    <nav className="navbar">
+      <span className="navbar-brand">Summer's Art</span>
+      <button
+        className={`hamburger${menuOpen ? ' open' : ''}`}
+        onClick={() => setMenuOpen(o => !o)}
+        aria-label="Toggle menu"
+      >
+        <span /><span /><span />
+      </button>
+      <ul className={`navbar-links${menuOpen ? ' show' : ''}`}>
+        <li><NavLink to="/" end>Home</NavLink></li>
+        <li><NavLink to="/about">About</NavLink></li>
+        <li><NavLink to="/contact">Contact</NavLink></li>
+      </ul>
+    </nav>
+  );
+}
 
 function App() {
   const [user, setUser] = useState(undefined); // undefined = loading
@@ -27,14 +54,7 @@ function App() {
 
   return (
     <Router>
-      <nav className="navbar">
-        <span className="navbar-brand">Summer's Art</span>
-        <ul className="navbar-links">
-          <li><NavLink to="/" end>Home</NavLink></li>
-          <li><NavLink to="/about">About</NavLink></li>
-          <li><NavLink to="/contact">Contact</NavLink></li>
-        </ul>
-      </nav>
+      <NavBar />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
