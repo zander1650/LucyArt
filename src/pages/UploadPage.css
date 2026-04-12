@@ -1,0 +1,262 @@
+.upload-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 80vh;
+  padding: 48px 20px;
+  gap: 32px;
+}
+
+.upload-card {
+  background: #ede8d8;
+  border: 1px solid #e0cfa8;
+  border-radius: 16px;
+  padding: 40px;
+  max-width: 500px;
+  width: 100%;
+  box-shadow: 0 8px 32px rgba(180, 130, 20, 0.1);
+}
+
+.upload-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 6px;
+}
+
+.upload-header h2 {
+  margin: 0;
+  color: #3d2e22;
+  font-size: 1.5em;
+}
+
+.signout-btn {
+  background: none;
+  border: 1px solid #e0cfa8;
+  border-radius: 6px;
+  padding: 6px 14px;
+  font-size: 0.85em;
+  color: #7a6a5a;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.signout-btn:hover {
+  background: #f5f0e8;
+}
+
+.upload-user {
+  color: #7a6a5a;
+  font-size: 0.88em;
+  margin: 0 0 28px;
+}
+
+.file-label {
+  display: block;
+  border: 2px dashed #c98a0a;
+  border-radius: 10px;
+  padding: 24px 16px;
+  text-align: center;
+  color: #7a6a5a;
+  cursor: pointer;
+  font-size: 0.95em;
+  margin-bottom: 16px;
+  transition: background 0.15s;
+}
+
+.file-label:hover {
+  background: rgba(201, 138, 10, 0.06);
+}
+
+.file-label input[type="file"] {
+  display: none;
+}
+
+.upload-btn {
+  width: 100%;
+  background: #c98a0a;
+  color: #2c2418;
+  border: none;
+  border-radius: 8px;
+  padding: 12px;
+  font-size: 1em;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.18s;
+}
+
+.upload-btn:hover:not(:disabled) {
+  background: #a36e08;
+}
+
+.upload-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.upload-error {
+  color: #b91c1c;
+  margin-top: 12px;
+  font-size: 0.9em;
+}
+
+.upload-success {
+  margin-top: 24px;
+  text-align: center;
+}
+
+.upload-success p {
+  color: #3d7a3a;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+.upload-success img {
+  max-width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+  margin-bottom: 10px;
+  display: block;
+}
+
+.upload-success a {
+  color: #c98a0a;
+  font-size: 0.9em;
+  text-decoration: underline;
+}
+
+.upload-input,
+.upload-textarea {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #e0cfa8;
+  border-radius: 8px;
+  font-size: 0.95em;
+  background: #f5f0e8;
+  color: #3d2e22;
+  box-sizing: border-box;
+  margin-bottom: 12px;
+  font-family: inherit;
+}
+
+.upload-textarea {
+  resize: vertical;
+  min-height: 60px;
+}
+
+.upload-input:focus,
+.upload-textarea:focus {
+  outline: 2px solid #c98a0a;
+  outline-offset: 1px;
+}
+
+.manage-card {
+  background: #ede8d8;
+  border: 1px solid #e0cfa8;
+  border-radius: 16px;
+  padding: 32px;
+  max-width: 700px;
+  width: 100%;
+  box-shadow: 0 8px 32px rgba(180, 130, 20, 0.1);
+}
+
+.manage-card h2 {
+  margin: 0 0 20px;
+  color: #3d2e22;
+  font-size: 1.3em;
+}
+
+.manage-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.manage-item {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  background: #f5f0e8;
+  border-radius: 10px;
+  padding: 12px;
+  border: 1px solid #e0cfa8;
+}
+
+.manage-item img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 8px;
+  flex-shrink: 0;
+}
+
+.manage-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.manage-info strong {
+  display: block;
+  color: #3d2e22;
+  font-size: 0.95em;
+  margin-bottom: 2px;
+  word-break: break-word;
+}
+
+.manage-info p {
+  color: #7a6a5a;
+  font-size: 0.85em;
+  margin: 0;
+  word-break: break-word;
+}
+
+.remove-btn {
+  background: none;
+  border: 1px solid #c9544a;
+  color: #c9544a;
+  border-radius: 6px;
+  padding: 6px 14px;
+  font-size: 0.85em;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background 0.15s, color 0.15s;
+  flex-shrink: 0;
+}
+
+.remove-btn:hover {
+  background: #c9544a;
+  color: #fff;
+}
+
+.manage-confirm {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+.manage-confirm span {
+  font-size: 0.85em;
+  color: #7a6a5a;
+}
+
+.confirm-yes {
+  background: #c9544a;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 12px;
+  font-size: 0.82em;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.confirm-no {
+  background: none;
+  border: 1px solid #e0cfa8;
+  color: #7a6a5a;
+  border-radius: 5px;
+  padding: 5px 12px;
+  font-size: 0.82em;
+  cursor: pointer;
+}
